@@ -1,5 +1,5 @@
 const mongoose =require('mongoose');
-const studentSchema = new mongoose.Schema({
+const adminSchema = new mongoose.Schema({
     name: {
         type:String,
         required:true
@@ -32,5 +32,5 @@ const studentSchema = new mongoose.Schema({
 })
 
 
-const Register = new mongoose.model("Register",studentSchema);
-module.exports= Register;
+const Admin = new mongoose.model("Admin",adminSchema);
+module.exports= Admin;

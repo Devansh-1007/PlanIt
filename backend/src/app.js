@@ -5,6 +5,7 @@ const hbs =require('hbs');
     
 require("./db/conn");
 const Register =require("./models/registers");
+const Admin =require("./models/admin");
 const port =process.env.PORT  || 3000;
 
 const templates_path =path.join(__dirname, '../templates/views');
@@ -30,6 +31,9 @@ app.get('/',(req,res) =>{
 app.get("/register", (req,res) =>{
      res.render("register");
 });
+app.get("/adminregister", (req,res) =>{
+     res.render("adminregister");
+});
 
 
 app.post("/register",  async (req,res) =>{
@@ -43,9 +47,34 @@ app.post("/register",  async (req,res) =>{
                 password : req.body.password,
                 confirmpassword : req.body.confirmpassword,
                 email : req.body.email,
-                gender : req.body.gender
+                gender : req.body.gender,
+                branch : req.body.branch
             })
          const registered = await registerStudent.save();
+         res.status(201).render("login");
+        }
+        else{
+            res.send("Password do not match");
+        }
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
+app.post("/adminregister",  async (req,res) =>{
+    try {
+        const adminpassword =req.body.password;
+        const adminconfirmpassword =req.body.confirmpassword;
+        if(adminpassword===adminconfirmpassword){
+            const registerAdmin = new Admin({
+                name : req.body.name,
+                phone : req.body.phone,
+                password : req.body.password,
+                confirmpassword : req.body.confirmpassword,
+                email : req.body.email,
+                gender : req.body.gender,
+                branch : req.body.branch
+            })
+         const adminregistered = await registerAdmin.save();
          res.status(201).render("login");
         }
         else{
@@ -77,6 +106,9 @@ app.post("/login",async (req,res) =>{
 
 app.get("/login",(req,res) =>{
     res.render("login");
+});
+app.get("/teaminfo",(req,res) =>{
+    res.render("teaminfo");
 });
 
 

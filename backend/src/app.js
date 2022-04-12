@@ -6,6 +6,7 @@ const hbs =require('hbs');
 require("./db/conn");
 const Register =require("./models/registers");
 const Admin =require("./models/admin");
+const Suggestion =require("./models/suggestion");
 const port =process.env.PORT  || 3000;
 
 const templates_path =path.join(__dirname, '../templates/views');
@@ -31,10 +32,39 @@ app.get('/',(req,res) =>{
 app.get("/register", (req,res) =>{
      res.render("register");
 });
+app.get("/index", (req,res) =>{
+     res.render("index");
+});
 app.get("/adminregister", (req,res) =>{
      res.render("adminregister");
 });
 
+app.get("/purvi_agrawal.jpeg", (req,res) =>{
+     res.render("purvi_agrawal.jpeg");
+});
+app.get("/devansh_choudhary.jpeg", (req,res) =>{
+     res.render("devansh_choudhary.jpeg");
+});
+
+app.get("/suggestion", (req,res) =>{
+    res.render("suggestion");
+});
+app.get("/teaminfo", (req,res) =>{
+    res.render("teaminfo");
+});
+
+app.post("/suggestion",  async (req,res) =>{
+    try {
+        const suggestedSuggestion = new Suggestion({
+                suggestion : req.body.suggestion
+            })
+         const suggested = await suggestedSuggestion.save();
+         res.status(201).render("index");
+        
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
 
 app.post("/register",  async (req,res) =>{
     try {
@@ -107,10 +137,6 @@ app.post("/login",async (req,res) =>{
 app.get("/login",(req,res) =>{
     res.render("login");
 });
-app.get("/teaminfo",(req,res) =>{
-    res.render("teaminfo");
-});
-
 
 app.get("/calendar",(req,res) =>{
     res.render("calendar");

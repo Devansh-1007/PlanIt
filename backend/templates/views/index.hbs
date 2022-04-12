@@ -8,7 +8,7 @@
     <meta name="google-signin-client_id" content="53234652156-fi59cr6a1mb3hpvbl1okhu2igre77vui.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <title>Student Support</title>
-          <style>
+                   <style>
               .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -20,15 +20,17 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
 }
 
+/* Add some padding inside the card container */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
   transition: 0.3s;
   border-radius: 27px;
   padding: 21px;
   margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin-right: 0.5em; /* 5px rounded corners */
 }
 
+/* Add rounded corners to the top left and the top right corner of the image */
 img {
   border-radius: 21px;
   height: 10em;
@@ -60,39 +62,58 @@ h1{
     align-items: center;
     font-weight: 800;
     font-size: 6em;
+    margin-top: 5%;
 }
 .aboutpara{
+  display: flex;
     font-size: 3em;
     font-weight: bolder;
+    margin-left: 7em;
+    margin-right: 7em;
+    margin-top: 2em;
+}
+body{
+  background-color: #ffffff;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+ @media screen and (min-width: 870px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;    
+     }
 }
 
-          </style>          
+          </style>
 </head>
-
 <body>
     {{>navbarindex}}
     <div class="mainpage">
-    </div><br><br><br>
+        <!--website name-->
+        <div class="website">
+        <br><br><br>
     <div class="description">
-        <div class="card" onclick="Doverify()">
-  <img  src="https://imgs.search.brave.com/WU7tCt7wXS5o4anBJSxHo7q-odwmKwha4Kqtv8WjUGE/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMyLm1pbnV0ZW1l/ZGlhY2RuLmNvbS9p/bWFnZS91cGxvYWQv/Y19jcm9wLGhfMjE2/NCx3XzM4NDUseF8w/LHlfMjU5L3YxNTU0/OTE4NDA1L3NoYXBl/L21lbnRhbGZsb3Nz/Lzk0NzM1LWlzdG9j/ay04NjM2MDc5MzYu/anBnP2l0b2s9MVFn/dXV6MjE" alt="Avatar" style="width:100%">
+        <div class="card"><a href="/todolist"><img  src="https://imgs.search.brave.com/WU7tCt7wXS5o4anBJSxHo7q-odwmKwha4Kqtv8WjUGE/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMyLm1pbnV0ZW1l/ZGlhY2RuLmNvbS9p/bWFnZS91cGxvYWQv/Y19jcm9wLGhfMjE2/NCx3XzM4NDUseF8w/LHlfMjU5L3YxNTU0/OTE4NDA1L3NoYXBl/L21lbnRhbGZsb3Nz/Lzk0NzM1LWlzdG9j/ay04NjM2MDc5MzYu/anBnP2l0b2s9MVFn/dXV6MjE" alt="Avatar" style="width:100%">
   <div class="container">
     <h2><b>To-do List</b></h2>
     <p>Listing your goals down is the first step towards completion</p>
   </div>
         <div id="descriptiontext">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis nostrum impedit
-            facilis sunt quas quae cupiditate.</div>
+            facilis sunt quas quae cupiditate.</div></a>
+  
 </div>
-        <div class="card" onclick="Doverify()">
-  <img  class="calendar" src="https://imgs.search.brave.com/fflD2g_wVvkW9A2fozwhQsxlWLTLtvvbyii5XI4tXqw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9vbnBs/YW5uZXJzLmNvbS9z/aXRlcy9kZWZhdWx0/L2ZpbGVzL3N0eWxl/cy90ZW1wbGF0ZV9m/YW5jeS9wdWJsaWMv/dGVtcGxhdGUtaW1h/Z2VzL3ByaW50YWJs/ZS1ob3Jpem9udGFs/LW1vbnRobHktY2Fs/ZW5kYXItdGVtcGxh/dGVfMS5wbmc" alt="Calendar" style="width:100%">
-  <div class="container">
+        <div class="card" ><a  href="/calendar"><img  class="calendar" src="https://imgs.search.brave.com/fflD2g_wVvkW9A2fozwhQsxlWLTLtvvbyii5XI4tXqw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9vbnBs/YW5uZXJzLmNvbS9z/aXRlcy9kZWZhdWx0/L2ZpbGVzL3N0eWxl/cy90ZW1wbGF0ZV9m/YW5jeS9wdWJsaWMv/dGVtcGxhdGUtaW1h/Z2VzL3ByaW50YWJs/ZS1ob3Jpem9udGFs/LW1vbnRobHktY2Fs/ZW5kYXItdGVtcGxh/dGVfMS5wbmc" alt="Calendar" style="width:100%">
+  <div class="container" >
     <h2><b>Calendar</b></h2>
     <p>Scheduling at your fingertips</p>
   </div>
         <div id="descriptiontext">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis nostrum impedit
-            facilis sunt quas quae cupiditate.</div>
+            facilis sunt quas quae cupiditate.</div></a>
+  
 </div>
-        <div class="card" onclick="Doverify()">
+        <div class="card">
   <img  src="https://imgs.search.brave.com/0OXf72gtYlR4ex38WScBtqytkSlcocRRw2eA7Kn1YyU/rs:fit:800:500:1/g:ce/aHR0cHM6Ly93d3cu/a3NkcjEubmV0L3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE4LzA4/L05vdGljZS04MDB4/NTAwX2MtODAweDUw/MC5qcGc" alt="Avatar" style="width:100%">
   <div class="container">
     <h2><b>Notices</b></h2>
@@ -101,11 +122,11 @@ h1{
         <div id="descriptiontext">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis nostrum impedit
             facilis sunt quas quae cupiditate.</div>
 </div>
-<div class="card" onclick="Doverify()">
+<div class="card">
   <img  class="calendar" src="https://imgs.search.brave.com/fflD2g_wVvkW9A2fozwhQsxlWLTLtvvbyii5XI4tXqw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9vbnBs/YW5uZXJzLmNvbS9z/aXRlcy9kZWZhdWx0/L2ZpbGVzL3N0eWxl/cy90ZW1wbGF0ZV9m/YW5jeS9wdWJsaWMv/dGVtcGxhdGUtaW1h/Z2VzL3ByaW50YWJs/ZS1ob3Jpem9udGFs/LW1vbnRobHktY2Fs/ZW5kYXItdGVtcGxh/dGVfMS5wbmc" alt="Calendar" style="width:100%">
   <div class="container">
-    <h2><b>Community</b></h2>
-    <p>Discuss and discover strategies and friends</p>
+    <h2><b>Suggestions</b></h2>
+    <p>Your suggestions are cordially invited </p>
   </div>
         <div id="descriptiontext">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis nostrum impedit
             facilis sunt quas quae cupiditate.</div>
@@ -114,15 +135,13 @@ h1{
     <div id="aboutus">
         <h1>ABOUT US</h1>
         <p class="aboutpara">
-           We needed something to keep us organised while balancing our IIT classes and maintaining a social life. As a result, we devised the plan to create this website as a college project. We've realised that the website has the potential to be so beneficial that it can serve as the foundation for something that will enable all students to achieve their full potential. We came up with this concept for making PlanIt the number one, go-to website for all students. The rest, as they say, is history. Now, fast forward to today, and we're working hard to build a platform that will help students succeed.
+            We needed something to keep us organised while balancing our IIT classes and maintaining a social life. As a result, we devised the plan to create this website as a college project. We've realised that the website has the potential to be so beneficial that it can serve as the foundation for something that will enable all students to achieve their full potential. We came up with this concept for making PlanIt the number one, go-to website for all students. The rest, as they say, is history. Now, fast forward to today, and we're working hard to build a platform that will help students succeed.
         </p>
     </div>
+    <div class="loginpage">
+        <div id="googleid"></div>
+    </div>
     <a href="/adminregister">register as admin</a>
-    <script src="../../src/app.js"></script>
 </body>
-<script>
-  function Doverify(){
-    alert("Register or Login to continue");
-  }
-</script>
+    <script src="../../src/app.js"></script>
 </html>

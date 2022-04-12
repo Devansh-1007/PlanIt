@@ -1,114 +1,156 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team</title>
+ <title>Our Team Section Design</title>
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-
+    awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body{
-  background-image: linear-gradient(120deg, #6fcefa, #031e2c);
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-.wrapper{
-  margin-top: 50px;
-}
-
-.wrapper h1{
-  font-family: 'Allura', cursive;
-  font-size: 52px;
-  margin-bottom: 60px;
-  text-align: center;
-}
-
 .team{
-  display: flex;
-  justify-content: center;
-  width: auto;
-  text-align: center;
-  flex-wrap: wrap;
+   margin: 75px 0;
 }
-
-.team .team_member{
-  background: #fff;
-  margin: 5px;
-  margin-bottom: 50px;
-  width: 300px;
-  padding: 20px;
-  line-height: 20px;
-  color: #8e8b8b;  
-  position: relative;
+h1
+{
+   text-align: center;
+   font-weight: bold;
+   letter-spacing: 2px;
+   color: #333;
+   padding-bottom: 10px;
 }
-
-.team .team_member h3{
-  color: #81c644;
-  font-size: 26px;
-  margin-top: 50px;
+h1:after
+{
+   content: '';
+   background: #333;
+   display: block;
+   height: 3px;
+   width: 150px;
+   margin: 10px auto;
 }
-
-.team .team_member p.role{
-  color: #ccc;
-  margin: 12px 0;
-  font-size: 12px;
-  text-transform: uppercase;
+.profile
+{
+   margin-top: 25px;
 }
-
-.team .team_member .team_img{
+.profile .img-box
+{
+   opacity: 1;
+   display: block;
+   position: relative;
+}
+.profile h2
+{
+   font-size: 22px;
+   font-weight: bold;
+   margin-top: 15px;
+}
+.profile h3
+{
+   font-size: 15px;
+   font-weight: bold;
+   margin-top:15px;
+}
+.img-box:after
+{
+  content: '';
+  opacity: 0;
+  background-color: rgba(0,0,0,0.6);
   position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.img-box ul
+{
+    margin: 0;
+    padding: 20px ®;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.img-box ul li
+{
+   width: 30px;
+     height: 30px;
+    border: 1px solid #fff;
   border-radius: 50%;
-  background: #fff;
+   margin: 3px;
+     padding: 7px;
+    display: inline-block;
 }
-
-.team .team_member .team_img img{
-  width: 100px;
-  height: 100px;
-  padding: 5px;
+.img-box a
+{
+    color: #fff;
 }
-
-    </style>
+.img-box:hover:after
+{
+    opacity: 1;
+}
+.img-box:hover ul
+{
+    opacity: 1;
+}
+.img-box a:hover li
+{
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+.img-box:after, .img-box ul, .img-box ul li
+{
+    transition: all 0.5s ease-in-out 0s;
+}
+</style>
 </head>
 <body>
-    <div class="wrapper">
-  <h1>Our Team</h1>
-  <div class="team">
-    <div class="team_member">
-      <div class="team_img">
-        <img src="https://i.imgur.com/2pGPLrl.png" alt="Team_image">
-      </div>
-      <h3>Paul Doe</h3>
-      <p class="role">UI developer</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p>
-    </div>
-    <div class="team_member">
-      <div class="team_img">
-        <img src="https://i.imgur.com/jQj1I8E.png" alt="Team_image">
-      </div>
-      <h3>Rosie Meg</h3>
-      <p class="role">Tester</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p></div>
-    <div class="team_member">
-      <div class="team_img">
-        <img src="https://i.imgur.com/2Necikc.png" alt="Team_image">
-      </div>
-      <h3>Alex Wood</h3>
-      <p class="role">Support Lead</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p>
-    </div>
-  </div>
-</div>
+    <section class="team">
+        <div class="container">
+            <h1>OUR TEAM</h1>
+            <div class="row">
+    <div class="col-md-3 profile text-center">
+        <div class="img-box">
+        <img src="./images/devansh_choudhary.jpeg" class="img-responsive">
+             <ul>
+                 I <a href="#"><li><i_class="fa fa-facebook"></i></li></a>
+                  <a href="#"><lj><i_class="fa fa-twitter"></i></li></a>
+                  <a href="#"><lj><j class="fa fa-linkedin"></i></li></a>
+             </ul>
+       </div>
+           <h2>Devansh Choudhary</h2>
+           <h3>Founder / CEO</h3>
+           <p> Subscribe Easy Tutorials Youtube Channel watch more videos</p>
+        </div>
+    <div class="col-md-3 profile text-center">
+        <div class="img-box">
+        <img src="./images/purvi_agrawal.jpeg" class="img-responsive">
+             <ul>
+                 I <a href="#"><li><i_class="fa fa-facebook"></i></li></a>
+                  <a href="#"><lj><i_class="fa fa-twitter"></i></li></a>
+                  <a href="#"><lj><j class="fa fa-linkedin"></i></li></a>
+             </ul>
+       </div>
+           <h2>Purvi Agrawal</h2>
+           <h3>Founder / CEO</h3>
+           <p> Subscribe Easy Tutorials Youtube Channel watch more videos</p>
+        </div>
+    <div class="col-md-3 profile text-center">
+        <div class="img-box">
+        <img src="team1.jpg" class="img-responsive">
+             <ul>
+                 I <a href="#"><li><i_class="fa fa-facebook"></i></li></a>
+                  <a href="#"><lj><i_class="fa fa-twitter"></i></li></a>
+                  <a href="#"><lj><j class="fa fa-linkedin"></i></li></a>
+             </ul>
+       </div>
+           <h2>Akshay Kumar</h2>
+           <h3>Founder / CEO</h3>
+           <p> Subscribe Easy Tutorials Youtube Channel watch more videos</p>
+        </div>
+        </div>
+    </section>
 </body>
 </html>

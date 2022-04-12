@@ -1,9 +1,9 @@
-2. focus mode
-5  mess timetable
-7. notesharing --
-
-//1. branch
-2. 
-
-// name logo , google login
-// dashboard 
+mess timetable  --- devansh
+footer section    --- devansh
+team info design  --- devansh
+responsiveness of index and dashboard  --- shivam
+background repeat prop sort --- shivam
+centralise calendar --- shivam
+add branches and improve look --devansh           
+check register page and login check fonts --devansh
+link css and images ---shivam

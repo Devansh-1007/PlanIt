@@ -62,14 +62,28 @@ h1{
     align-items: center;
     font-weight: 800;
     font-size: 6em;
+    margin-top: 5%;
 }
 .aboutpara{
+  display: flex;
     font-size: 3em;
     font-weight: bolder;
+    margin-left: 7em;
+    margin-right: 7em;
+    margin-top: 2em;
+}
+body{
+  background-color: #ffffff;
 }
 a{
   text-decoration: none;
   color: black;
+}
+ @media screen and (min-width: 870px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;    
+     }
 }
 
           </style>
@@ -111,8 +125,8 @@ a{
 <div class="card">
   <img  class="calendar" src="https://imgs.search.brave.com/fflD2g_wVvkW9A2fozwhQsxlWLTLtvvbyii5XI4tXqw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9vbnBs/YW5uZXJzLmNvbS9z/aXRlcy9kZWZhdWx0/L2ZpbGVzL3N0eWxl/cy90ZW1wbGF0ZV9m/YW5jeS9wdWJsaWMv/dGVtcGxhdGUtaW1h/Z2VzL3ByaW50YWJs/ZS1ob3Jpem9udGFs/LW1vbnRobHktY2Fs/ZW5kYXItdGVtcGxh/dGVfMS5wbmc" alt="Calendar" style="width:100%">
   <div class="container">
-    <h2><b>Community</b></h2>
-    <p>Discuss and discover strategies and friends</p>
+    <h2><b>Suggestions</b></h2>
+    <p>Your suggestions are cordially invited </p>
   </div>
         <div id="descriptiontext">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis nostrum impedit
             facilis sunt quas quae cupiditate.</div>
@@ -128,8 +142,8 @@ a{
         <div id="googleid"></div>
     </div>
     {{>footer}}
-    <script src="../../src/app.js"></script>
 </body>
+    <script src="../../src/app.js"></script>
 <script>
         alert("You have successfully logged in");
 </script>

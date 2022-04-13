@@ -24,12 +24,7 @@ const studentSchema = new mongoose.Schema({
     gender:{
         type:String,
         required:true
-    },
-    branch:{
-        type: String,
-        required:true
-    }
-})
+    }})
 
 
 const Register = new mongoose.model("Register",studentSchema);

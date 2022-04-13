@@ -1,156 +1,178 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
- <title>Our Team Section Design</title>
-<link href="style.css" rel="stylesheet">
-<link rel="stylesheet"
-href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-
-    awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Member Section</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
     <style>
-.team{
-   margin: 75px 0;
+        *{
+     margin: 0;
+     padding: 0;
 }
-h1
-{
-   text-align: center;
-   font-weight: bold;
-   letter-spacing: 2px;
-   color: #333;
-   padding-bottom: 10px;
+body{
+     background: #efefef;
+     font-family: 'Poppins', sans-serif;
+      background-image: linear-gradient(120deg, #6fcefa, #031e2c);
+    background-repeat: no-repeat;
 }
-h1:after
-{
-   content: '';
-   background: #333;
-   display: block;
-   height: 3px;
-   width: 150px;
-   margin: 10px auto;
+h1{
+    font-weight: 800;
+    font-size: 4em;
+    font-family: 'Updock', cursive;
 }
-.profile
-{
+.title-box{
+     text-align: center;
+     margin: 90px auto 50px;
+}
+.title-box p{
+   margin-top: 10px;
+    line-height: 24px;
+}
+.profile-box{
+   width: 275px;
+    height: 275px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 10px 5px rgba(115,193,255, 0.4);
+    padding: 17px;
+    position: relative;
+    transition: background 0.5s;
+    margin-right: 2rem;
+    margin-right: 2rem;
+}
+.profile-box img{
+   width: 100px;
+   height: 100px;
+   position: absolute;
+    top: 20px;
+    right: 20px;
+   border-radius: 4px;
+}
+.profile-box h4{
    margin-top: 25px;
+   margin-bottom: 5px;
+   color: #2196f3;
 }
-.profile .img-box
-{
-   opacity: 1;
-   display: block;
-   position: relative;
+small{
+    color: #555;
 }
-.profile h2
-{
-   font-size: 22px;
-   font-weight: bold;
-   margin-top: 15px;
+ .social-box{
+    background: #2196f3;
+    margin: 60px auto 20px;
+    text-align: center;
+    border-radius: 3px;
 }
-.profile h3
-{
-   font-size: 15px;
-   font-weight: bold;
-   margin-top:15px;
-}
-.img-box:after
-{
-  content: '';
-  opacity: 0;
-  background-color: rgba(0,0,0,0.6);
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-}
-.img-box ul
-{
-    margin: 0;
-    padding: 20px ®;
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    display: block;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-}
-.img-box ul li
-{
-   width: 30px;
-     height: 30px;
-    border: 1px solid #fff;
-  border-radius: 50%;
-   margin: 3px;
-     padding: 7px;
-    display: inline-block;
-}
-.img-box a
-{
+.social-box .fa{
+   margin: 5px;
     color: #fff;
+    cursor: pointer;
 }
-.img-box:hover:after
-{
-    opacity: 1;
+.profile-box p{
+    text-align: center;
+    line-height: 24px;
+    color: #555;
 }
-.img-box:hover ul
-{
-    opacity: 1;
+.team-row{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
 }
-.img-box a:hover li
-{
-    color: #007bff;
-    border: 1px solid #007bff;
+.profile-box img:hover{
+    width: 275px;
+    height: 275px;
 }
-.img-box:after, .img-box ul, .img-box ul li
-{
-    transition: all 0.5s ease-in-out 0s;
+.profile-box:hover{
+   background: #2196f3;
 }
-</style>
+.profile-box:hover h4{
+   color: #fff;
+}
+.profile-box:hover p{
+   color: #efefef;
+}
+.profile-box:hover small{
+   color: #efefef;
+}
+.profile-box:hover .social-box{
+   background: #000000;
+}
+.þrofile-box:hover .social-box .fa{
+  color: #2196f3;
+}
+.logo {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.logo a {
+	position: fixed;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+}
+
+.logo a:hover {
+    color: #00E676;
+}
+.logo {
+        margin-left: 15px;
+    }
+    </style>
 </head>
 <body>
-    <section class="team">
-        <div class="container">
-            <h1>OUR TEAM</h1>
-            <div class="row">
-    <div class="col-md-3 profile text-center">
-        <div class="img-box">
-        <img src="./images/devansh_choudhary.jpeg" class="img-responsive">
-             <ul>
-                 I <a href="#"><li><i_class="fa fa-facebook"></i></li></a>
-                  <a href="#"><lj><i_class="fa fa-twitter"></i></li></a>
-                  <a href="#"><lj><j class="fa fa-linkedin"></i></li></a>
-             </ul>
-       </div>
-           <h2>Devansh Choudhary</h2>
-           <h3>Founder / CEO</h3>
-           <p> Subscribe Easy Tutorials Youtube Channel watch more videos</p>
+    <div class="logo">
+                <a href="/dashboard">PlanIt</a>
+            </div>
+  
+     <div class="title-box">
+    <h1>Our Team</h1>
+     </div>
+     <div class="team-row">
+   <div class="profile-box">
+        <h4>Shivam Gupta</h4>
+        <small>Founder</small>
+        <img src="./images/devansh_choudhary.jpeg" alt="">
+        <div class="social-box">
+         <i class="fa fa-facebook"></i>
+         <i class="fa fa-twitter"></i>
+         <i class="fa fa-linkedin"></i>
+         <i class="fa fa-instagram"></i>
         </div>
-    <div class="col-md-3 profile text-center">
-        <div class="img-box">
-        <img src="./images/purvi_agrawal.jpeg" class="img-responsive">
-             <ul>
-                 I <a href="#"><li><i_class="fa fa-facebook"></i></li></a>
-                  <a href="#"><lj><i_class="fa fa-twitter"></i></li></a>
-                  <a href="#"><lj><j class="fa fa-linkedin"></i></li></a>
-             </ul>
-       </div>
-           <h2>Purvi Agrawal</h2>
-           <h3>Founder / CEO</h3>
-           <p> Subscribe Easy Tutorials Youtube Channel watch more videos</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, temporibus.</p>
+   </div>
+   <div class="profile-box">
+        <h4>Devansh Choudhary</h4>
+        <small>Founder</small>
+        <img src="./images/devansh_choudhary.jpeg" alt="">
+        <div class="social-box">
+         <i class="fa fa-facebook"></i>
+         <i class="fa fa-twitter"></i>
+         <i class="fa fa-linkedin"></i>
+         <i class="fa fa-instagram"></i>
         </div>
-    <div class="col-md-3 profile text-center">
-        <div class="img-box">
-        <img src="team1.jpg" class="img-responsive">
-             <ul>
-                 I <a href="#"><li><i_class="fa fa-facebook"></i></li></a>
-                  <a href="#"><lj><i_class="fa fa-twitter"></i></li></a>
-                  <a href="#"><lj><j class="fa fa-linkedin"></i></li></a>
-             </ul>
-       </div>
-           <h2>Akshay Kumar</h2>
-           <h3>Founder / CEO</h3>
-           <p> Subscribe Easy Tutorials Youtube Channel watch more videos</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, temporibus.</p>
+   </div>
+   <div class="profile-box">
+        <h4>Purvi Agrawal</h4>
+        <small>Founder</small>
+        <img src="./images/devansh_choudhary.jpeg" alt="">
+        <div class="social-box">
+         <i class="fa fa-facebook"></i>
+         <i class="fa fa-twitter"></i>
+         <i class="fa fa-linkedin"></i>
+         <i class="fa fa-instagram"></i>
         </div>
-        </div>
-    </section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, temporibus.</p>
+   </div>
+</div>
 </body>
 </html>

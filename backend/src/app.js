@@ -32,6 +32,10 @@ app.get('/',(req,res) =>{
 app.get("/register", (req,res) =>{
      res.render("register");
 });
+
+app.get("/dashboard", (req,res) =>{
+     res.render("dashboard");
+});
 app.get("/index", (req,res) =>{
      res.render("index");
 });
@@ -59,7 +63,7 @@ app.post("/suggestion",  async (req,res) =>{
                 suggestion : req.body.suggestion
             })
          const suggested = await suggestedSuggestion.save();
-         res.status(201).render("index");
+         res.status(201).render("dashboard");
         
     } catch (error) {
         res.status(400).send(error);

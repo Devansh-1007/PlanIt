@@ -1,9 +1,0 @@
-acad timetable  --- 
-footer section    --- 
-team info design  --- 
-responsiveness of index and dashboard  ---
-background repeat prop sort ---
-centralise calendar ---
-add branches and improve look --           
-check register page and login check fonts --
-link css and images --

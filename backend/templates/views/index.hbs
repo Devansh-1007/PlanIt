@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-signin-client_id" content="53234652156-fi59cr6a1mb3hpvbl1okhu2igre77vui.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <title>Student Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <title>PlanIt</title>
                    <style>
       body{
         background-image: linear-gradient(120deg, #6fcefa, #031e2c);
@@ -18,7 +20,7 @@
     color: black;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  height: 46em;
+  height: 38em;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -31,7 +33,6 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
   transition: 0.3s;
   border-radius: 27px;
-  padding: 21px;
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
@@ -48,15 +49,13 @@ h2{
     margin: 2%;
 }
 
-.container {
-  padding: 2px 16px;
-}
 .description{
    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 8px;
     justify-content: center;
     align-items: center;
+    margin-top: 2em;
 }
 #descriptiontext{
   font-size: 20px;
@@ -76,11 +75,12 @@ h1{
 }
 .aboutpara{
   display: flex;
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: bolder;
-    margin-left: 7em;
-    margin-right: 7em;
+    margin-left: 6em;
+    margin-right: 6em;
     margin-top: 2em;
+   font-family: 'Satisfy', cursive;
 }
 body{
   background-color: #ffffff;
@@ -96,7 +96,7 @@ a{
      }
 }
 b{
-  font-size: 270%;
+  font-size: 170%;
 }
           </style>
 </head>
@@ -107,20 +107,20 @@ b{
         <div class="website">
         <br><br><br>
     <div class="description" onclick="myFunction()">
-        <div  class="card"><a ><img  src="https://imgs.search.brave.com/WU7tCt7wXS5o4anBJSxHo7q-odwmKwha4Kqtv8WjUGE/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMyLm1pbnV0ZW1l/ZGlhY2RuLmNvbS9p/bWFnZS91cGxvYWQv/Y19jcm9wLGhfMjE2/NCx3XzM4NDUseF8w/LHlfMjU5L3YxNTU0/OTE4NDA1L3NoYXBl/L21lbnRhbGZsb3Nz/Lzk0NzM1LWlzdG9j/ay04NjM2MDc5MzYu/anBnP2l0b2s9MVFn/dXV6MjE" alt="Avatar" style="width:100%">
+        <div  class="card"><img  src="https://imgs.search.brave.com/WU7tCt7wXS5o4anBJSxHo7q-odwmKwha4Kqtv8WjUGE/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMyLm1pbnV0ZW1l/ZGlhY2RuLmNvbS9p/bWFnZS91cGxvYWQv/Y19jcm9wLGhfMjE2/NCx3XzM4NDUseF8w/LHlfMjU5L3YxNTU0/OTE4NDA1L3NoYXBl/L21lbnRhbGZsb3Nz/Lzk0NzM1LWlzdG9j/ay04NjM2MDc5MzYu/anBnP2l0b2s9MVFn/dXV6MjE" alt="Avatar" style="width:100%">
   <div class="container">
     <h2><b>To-do List</b></h2>
-    <p>Listing your goals down is the first step towards completion</p>
+    <p>List down your goals</p>
   </div>
-        <div id="descriptiontext">Centralize your activities. Be productive. Free up more time to do meaningful work.</div></a>
+        
   
 </div>
-        <div  class="card" ><a ><img  class="calendar" src="https://imgs.search.brave.com/fflD2g_wVvkW9A2fozwhQsxlWLTLtvvbyii5XI4tXqw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9vbnBs/YW5uZXJzLmNvbS9z/aXRlcy9kZWZhdWx0/L2ZpbGVzL3N0eWxl/cy90ZW1wbGF0ZV9m/YW5jeS9wdWJsaWMv/dGVtcGxhdGUtaW1h/Z2VzL3ByaW50YWJs/ZS1ob3Jpem9udGFs/LW1vbnRobHktY2Fs/ZW5kYXItdGVtcGxh/dGVfMS5wbmc" alt="Calendar" style="width:100%">
+        <div  class="card" ><img  class="calendar" src="https://imgs.search.brave.com/fflD2g_wVvkW9A2fozwhQsxlWLTLtvvbyii5XI4tXqw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9vbnBs/YW5uZXJzLmNvbS9z/aXRlcy9kZWZhdWx0/L2ZpbGVzL3N0eWxl/cy90ZW1wbGF0ZV9m/YW5jeS9wdWJsaWMv/dGVtcGxhdGUtaW1h/Z2VzL3ByaW50YWJs/ZS1ob3Jpem9udGFs/LW1vbnRobHktY2Fs/ZW5kYXItdGVtcGxh/dGVfMS5wbmc" alt="Calendar" style="width:100%">
   <div class="container" >
     <h2><b>Calendar</b></h2>
     <p>Scheduling at your fingertips</p>
   </div>
-        <div id="descriptiontext">Keep track of your progress. Add smart reminders so you never forget a thing. With beautiful themes and turbo-charging powers, you’re guaranteed to save time and achieve great things.</div></a>
+        
   
 </div>
         <div  class="card">
@@ -129,7 +129,7 @@ b{
     <h2><b>Notices</b></h2>
     <p>Get all the updates at the earliest</p>
   </div>
-        <div id="descriptiontext">All your important notifications at one place.</div>
+        
 </div>
 <div  class="card">
   <img  class="calendar" src="https://imgs.search.brave.com/fflD2g_wVvkW9A2fozwhQsxlWLTLtvvbyii5XI4tXqw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9vbnBs/YW5uZXJzLmNvbS9z/aXRlcy9kZWZhdWx0/L2ZpbGVzL3N0eWxl/cy90ZW1wbGF0ZV9m/YW5jeS9wdWJsaWMv/dGVtcGxhdGUtaW1h/Z2VzL3ByaW50YWJs/ZS1ob3Jpem9udGFs/LW1vbnRobHktY2Fs/ZW5kYXItdGVtcGxh/dGVfMS5wbmc" alt="Calendar" style="width:100%">
@@ -137,7 +137,6 @@ b{
     <h2><b>Suggestions</b></h2>
     <p>Your suggestions are cordially invited </p>
   </div>
-        <div id="descriptiontext">Help us in making your life hassle free and organised. Your inputs and suggestions are valuable to us.</div>
 </div>
     </div>
     <div id="aboutus">
@@ -148,8 +147,10 @@ b{
     </div>
     <div class="loginpage">
         <div id="googleid"></div>
+   
     </div>
-    <a href="/adminregister">register as admin</a>
+    {{!-- this will be made available only to admins who update notice board --}}
+    {{!-- <a href="/adminregister">register as admin</a> --}}
 </body>
     <script src="../../src/app.js"></script>
     <script>
